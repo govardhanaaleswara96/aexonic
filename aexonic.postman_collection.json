@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "1fe19c54-b4c9-4fb1-ac0b-b34e8c0a2bbd",
+		"name": "aexonic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Govardhan\",\r\n    \"lastName\": \"AB\",\r\n    \"email\": \"goabala1@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"mobile\": \"6382276063\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"goabala1@gmail.com\",\r\n    \"password\": \"123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbGUiOnsiX2lkIjoiNjI1NTQ5MTU3MDYwOWUyOTU0ZGI5ZWY2IiwiZmlyc3ROYW1lIjoiR292YXJkaGFuIiwibGFzdE5hbWUiOiJBQiIsImVtYWlsIjoiZ29hYmFsYTFAZ21haWwuY29tIiwibW9iaWxlIjoiNjM4MjI3NjA2MyIsImNyZWF0ZWRBdCI6IjIwMjItMDQtMTJUMDk6NDA6MzcuMjU0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDQtMTJUMDk6NDA6MzcuMjU0WiIsIl9fdiI6MH0sImlhdCI6MTY0OTc1NjU4OX0.C5hAb5otWC8DfwdYeRLuVbaH-Jd9tFUe3jYXK9Ljt94",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Govardhan\",\r\n    \"lastName\": \"AB\",\r\n    \"email\": \"goabala1@gmail.com\",\r\n    \"mobile\": \"6382276063\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/user/6255491570609e2954db9ef6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user",
+						"6255491570609e2954db9ef6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:2000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:2000/user/search?firstName=Govardhan&lastName=AB&email=goabala@gmail.com&mobile=6382276063",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Govardhan"
+						},
+						{
+							"key": "lastName",
+							"value": "AB"
+						},
+						{
+							"key": "email",
+							"value": "goabala@gmail.com"
+						},
+						{
+							"key": "mobile",
+							"value": "6382276063"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
